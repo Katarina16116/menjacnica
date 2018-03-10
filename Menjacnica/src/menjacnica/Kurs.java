@@ -33,6 +33,29 @@ public class Kurs {
 	public void setSrednjiKurs(double srednjiKurs) {
 		this.srednjiKurs = srednjiKurs;
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((datum == null) ? 0 : datum.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Kurs))
+			return false;
+		Kurs k = (Kurs)(obj);
+		if(!this.datum.equals(k.getDatum()))
+			return false;
+		
+		return true;
+		
+	}
+	@Override
+	public String toString() {
+		return "Datuma " +datum.getTime()+ ":\n-prodajni kurs: " +prodajniKurs+ "\n-kupovnikurs: " +kupovniKurs+
+				"\n-srednji kurs: " +srednjiKurs+ "\n";
+	}	
 
 	
 }

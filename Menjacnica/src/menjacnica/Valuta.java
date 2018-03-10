@@ -25,6 +25,31 @@ public class Valuta {
 	}
 	public void setKursevi(LinkedList<Kurs> kursevi) {
 		this.kursevi = kursevi;
-	}	
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((kursevi == null) ? 0 : kursevi.hashCode());
+		result = prime * result + ((nazivValute == null) ? 0 : nazivValute.hashCode());
+		result = prime * result + ((oznakaValute == null) ? 0 : oznakaValute.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Valuta))
+			return false;
+		
+		Valuta v = (Valuta)(obj);
+		if(!(oznakaValute == v.getOznakaValute()))
+			return false;
+		
+		return true;
+	}
+	@Override
+	public String toString() {
+		return nazivValute+ " (" +oznakaValute+ ") , kursevi: " +kursevi;
+	}
+	
 
 }
