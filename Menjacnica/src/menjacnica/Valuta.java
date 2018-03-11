@@ -12,12 +12,16 @@ public class Valuta {
 		return nazivValute;
 	}
 	public void setNazivValute(String nazivValute) {
+		if(nazivValute == null)
+			throw new RuntimeException("Naziv valute je null");
 		this.nazivValute = nazivValute;
 	}
 	public String getOznakaValute() {
 		return oznakaValute;
 	}
 	public void setOznakaValute(String oznakaValute) {
+		if(oznakaValute == null)
+			throw new RuntimeException("Oznaka valute je null");
 		this.oznakaValute = oznakaValute;
 	}
 	public LinkedList<Kurs> getKursevi() {
