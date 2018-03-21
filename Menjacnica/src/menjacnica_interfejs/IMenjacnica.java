@@ -4,8 +4,8 @@ import menjacnica.Kurs;
 
 public interface IMenjacnica {
 	
-	public void dodajKurs(Kurs k);
-	public void obrisiKurs(Kurs k);
-	public Kurs pronadjiKurs(Kurs k);
+	public void dodajKurs(String valuta, Kurs k);
+	public void obrisiKurs(String valuta, Kurs k);
+	public Kurs pronadjiKurs(String valuta, Kurs k);
 
 }
