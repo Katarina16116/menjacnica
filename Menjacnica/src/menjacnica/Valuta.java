@@ -28,7 +28,8 @@ public class Valuta {
 		return kursevi;
 	}
 	public void setKursevi(Kurs k) {
-		if(k == null) throw new RuntimeException("Ne sme biti null");
+		if(k == null) throw new RuntimeException("Kurs ne sme biti null");
+		
 		this.kursevi.add(k);
 	}
 	@Override
