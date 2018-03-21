@@ -27,8 +27,9 @@ public class Valuta {
 	public LinkedList<Kurs> getKursevi() {
 		return kursevi;
 	}
-	public void setKursevi(LinkedList<Kurs> kursevi) {
-		this.kursevi = kursevi;
+	public void setKursevi(Kurs k) {
+		if(k == null) throw new RuntimeException("Ne sme biti null");
+		this.kursevi.add(k);
 	}
 	@Override
 	public int hashCode() {
